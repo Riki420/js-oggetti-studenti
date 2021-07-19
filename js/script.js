@@ -66,22 +66,43 @@ for(var key in student){
 //creo un array di oggetti con altri studenti
 console.log('------LISTA STUDENTI-----')
 var studentsList = [
-    {firstName: 'Giacomino',
-    secondName: 'Stambecco',
-    age: '23'},
-    {firstName: 'Jack',
-    secondName: 'Herer',
-    age: '420'},
-    {firstName: 'Filberto',
-    secondName: 'Forestiero',
-    age: '784'},
-    {firstName: 'Gennaro',
-    secondName: 'Il Benzinaio',
-    age: '34'}
+    {nome: 'Giacomino',
+    cognome: 'Stambecco',
+    anni: '23'},
+    {nome: 'Jack',
+    cognome: 'Herer',
+    anni: '420'},
+    {nome: 'Filberto',
+    cognome: 'Forestiero',
+    anni: '784'},
+    {nome: 'Gennaro',
+    cognome: 'Il Benzinaio',
+    anni: '34'}
 ];
 
 
 //con un ciclo for vado a raccogliere tutti i dati e li stampo nome e cognome per ogni studente
-for(var key in studentsList){
-    console.log(studentsList[key].firstName + ' ' + studentsList[key].secondName)
+for(var key in studentsList){               //ciclo dentro ogni elemento per trovare i nomi e i cognomi di tutti gli studenti presenti
+    console.log(studentsList[key].nome + ' ' + studentsList[key].cognome);
+}
+
+
+//creo i prompt necessari per permettere all'utente di creare un nuovo utente
+var userName = prompt('inserisci un nome');
+var userSurname = prompt('inserisci il cognome');
+var ageUser = prompt("inserisci l'età");
+
+//creo un nuovo oggetto da pushare, che contiene i dati inseriti dall'utente
+var newUser = {
+    nome: userName,
+    cognome: userSurname,
+    anni: ageUser
+}
+
+studentsList.push(newUser);                 //pusho dentro array studentList l'oggetto con i dati dell'utente
+
+
+console.log('------NUOVO STUDENTE IN ARRIVO------')
+for(var key in studentsList){               //ciclo dentro ogni elemento per trovare i nomi e i cognomi di tutti gli studenti presenti
+    console.log(studentsList[key].nome + ' ' + studentsList[key].cognome);
 }
