@@ -34,6 +34,12 @@
 
 
 
+
+
+
+
+//  *************************** ESERCIZIO 1 ***********************************************
+
 //creo una variabile per derscrivere uno studente
 var student = {
     firstName: 'Filberto',
@@ -41,10 +47,17 @@ var student = {
     age: '784'
 }
 
-var studentElement = document.getElementById('students');
-
 //creo un ciclo for per girare dentro l'oggetto e stamparne il contenuto in console
 for(var key in student){
-    console.log(student[key]);
+    console.log(key + ' ' + student[key]);
 }
 
+
+
+
+
+
+//  *************************** ESERCIZIO 2 ***********************************************
+
+
+var studentsList = {}
