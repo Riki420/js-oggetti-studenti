@@ -46,16 +46,18 @@ console.log('------LO STUDENTE SOLITARIO-----')
 var student = {
     nome: 'Filberto',
     cognome: 'Forestiero',
-    anni: '784'
+    anni: '45'
 }
+
+var stringa = '';
 
 //creo un ciclo for per girare dentro l'oggetto e stamparne il contenuto in console
 for(var key in student){
     console.log(key + ' ' + student[key]);
-    document.getElementById('es1').innerHTML = key + ' ' + student[key];
-
+    stringa += ' ' + key + ' ' + student[key];
 
 }
+document.getElementById('es1').innerHTML = stringa;
 
  
 
