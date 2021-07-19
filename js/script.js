@@ -52,10 +52,12 @@ var student = {
 //creo un ciclo for per girare dentro l'oggetto e stamparne il contenuto in console
 for(var key in student){
     console.log(key + ' ' + student[key]);
+    document.getElementById('es1').innerHTML = key + ' ' + student[key];
+
+
 }
 
-
-
+ 
 
 
 
@@ -102,9 +104,11 @@ var newUser = {
 studentsList.push(newUser);                 //pusho dentro array studentList l'oggetto con i dati dell'utente
 
 
-console.log('------NUOVO STUDENTE IN ARRIVO------')
-for(var key in studentsList){               
-    console.log(studentsList[key].nome + ' ' + studentsList[key].cognome);
+console.log('------NUOVO STUDENTE IN ARRIVO------');
+
+    for(var key in studentsList){               
+        console.log(studentsList[key].nome + ' ' + studentsList[key].cognome);    
+    }
     document.getElementById('students').innerHTML = 'Nome: ' + studentsList[key].nome + ' Cognome: ' + studentsList[key].cognome;
 
-}
+
