@@ -40,6 +40,8 @@
 
 //  *************************** ESERCIZIO 1 ***********************************************
 
+console.log('------LO STUDENTE SOLITARIO-----')
+
 //creo una variabile per derscrivere uno studente
 var student = {
     firstName: 'Filberto',
@@ -62,6 +64,7 @@ for(var key in student){
 
 
 //creo un array di oggetti con altri studenti
+console.log('------LISTA STUDENTI-----')
 var studentsList = [
     {firstName: 'Giacomino',
     secondName: 'Stambecco',
@@ -76,3 +79,9 @@ var studentsList = [
     secondName: 'Il Benzinaio',
     age: '34'}
 ];
+
+
+//con un ciclo for vado a raccogliere tutti i dati e li stampo nome e cognome per ogni studente
+for(var key in studentsList){
+    console.log(studentsList[key].firstName + ' ' + studentsList[key].secondName)
+}
