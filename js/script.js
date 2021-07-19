@@ -21,7 +21,7 @@
 //--------------------------------------------------------------------------------------//
 
 //*1 Creo una variabile oggetto che descriva uno studente con proprietà: nome, cognome ed età
-//*2 Stampo in pagina le informazioni dell'utente
+//*2 Stampo in pagina con un ciclo for le informazioni dell'utente
 
 //--------------------------------------------------------------------------------------//
 //                                     ESERCIZIO 2                                      //
@@ -31,4 +31,20 @@
 //*2 Ciclo con for sopra ognuno di essi
 //*3 Stampo per ogni studente nome e cognome
 //*4 Tramite 3 prompt chiedo all'utente di inserire un nuovo studente con nome, cognome ed età
+
+
+
+//creo una variabile per derscrivere uno studente
+var student = {
+    firstName: 'Filberto',
+    secondName: 'Forestiero',
+    age: '784'
+}
+
+var studentElement = document.getElementById('students');
+
+//creo un ciclo for per girare dentro l'oggetto e stamparne il contenuto in console
+for(var key in student){
+    console.log(student[key]);
+}
 
