@@ -54,7 +54,7 @@ var stringa = '';
 //creo un ciclo for per girare dentro l'oggetto e stamparne il contenuto in console
 for(var key in student){
     console.log(key + ' ' + student[key]);
-    stringa += ' ' + key + ' ' + student[key];
+    stringa += '<li>' + key + ' ' + student[key] + '</li>';
 
 }
 document.getElementById('es1').innerHTML = stringa;
@@ -92,9 +92,9 @@ for(var key in studentsList){               //ciclo dentro ogni elemento per tro
 
 
 //creo i prompt necessari per permettere all'utente di creare un nuovo utente
-var userName = prompt('inserisci un nome');
-var userSurname = prompt('inserisci il cognome');
-var ageUser = prompt("inserisci l'età");
+var userName = prompt('inserisci un nome').trim();
+var userSurname = prompt('inserisci il cognome').trim();
+var ageUser = prompt("inserisci l'età").trim();
 
 //creo un nuovo oggetto da pushare, che contiene i dati inseriti dall'utente
 console.log('------NUOVO STUDENTE IN ARRIVO------');
@@ -113,7 +113,7 @@ var studentListString = '';
 //con un ciclo for stampo il nome e cognome degli studenti
     for(var key in studentsList){               
         console.log(studentsList[key].nome + ' ' + studentsList[key].cognome);
-        studentListString += studentsList[key].nome + ' ' + studentsList[key].cognome + ' ';   
+        studentListString += '<li>' + studentsList[key].nome + ' ' + studentsList[key].cognome + '</li>';   
     }
     document.getElementById('students').innerHTML = studentListString;
 
