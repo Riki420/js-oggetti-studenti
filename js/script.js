@@ -60,4 +60,19 @@ for(var key in student){
 //  *************************** ESERCIZIO 2 ***********************************************
 
 
-var studentsList = {}
+
+//creo un array di oggetti con altri studenti
+var studentsList = [
+    {firstName: 'Giacomino',
+    secondName: 'Stambecco',
+    age: '23'},
+    {firstName: 'Jack',
+    secondName: 'Herer',
+    age: '420'},
+    {firstName: 'Filberto',
+    secondName: 'Forestiero',
+    age: '784'},
+    {firstName: 'Gennaro',
+    secondName: 'Il Benzinaio',
+    age: '34'}
+];
