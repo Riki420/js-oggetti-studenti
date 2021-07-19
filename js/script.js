@@ -44,9 +44,9 @@ console.log('------LO STUDENTE SOLITARIO-----')
 
 //creo una variabile per derscrivere uno studente
 var student = {
-    firstName: 'Filberto',
-    secondName: 'Forestiero',
-    age: '784'
+    nome: 'Filberto',
+    cognome: 'Forestiero',
+    anni: '784'
 }
 
 //creo un ciclo for per girare dentro l'oggetto e stamparne il contenuto in console
@@ -103,6 +103,8 @@ studentsList.push(newUser);                 //pusho dentro array studentList l'o
 
 
 console.log('------NUOVO STUDENTE IN ARRIVO------')
-for(var key in studentsList){               //ciclo dentro ogni elemento per trovare i nomi e i cognomi di tutti gli studenti presenti
+for(var key in studentsList){               
     console.log(studentsList[key].nome + ' ' + studentsList[key].cognome);
+    document.getElementById('students').innerHTML = 'Nome: ' + studentsList[key].nome + ' Cognome: ' + studentsList[key].cognome;
+
 }
