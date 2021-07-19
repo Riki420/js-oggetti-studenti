@@ -97,6 +97,9 @@ var userSurname = prompt('inserisci il cognome');
 var ageUser = prompt("inserisci l'età");
 
 //creo un nuovo oggetto da pushare, che contiene i dati inseriti dall'utente
+console.log('------NUOVO STUDENTE IN ARRIVO------');
+
+
 var newUser = {
     nome: userName,
     cognome: userSurname,
@@ -105,12 +108,13 @@ var newUser = {
 
 studentsList.push(newUser);                 //pusho dentro array studentList l'oggetto con i dati dell'utente
 
+var studentListString = '';
 
-console.log('------NUOVO STUDENTE IN ARRIVO------');
-
+//con un ciclo for stampo il nome e cognome degli studenti
     for(var key in studentsList){               
-        console.log(studentsList[key].nome + ' ' + studentsList[key].cognome);    
+        console.log(studentsList[key].nome + ' ' + studentsList[key].cognome);
+        studentListString += studentsList[key].nome + ' ' + studentsList[key].cognome + ' ';   
     }
-    document.getElementById('students').innerHTML = 'Nome: ' + studentsList[key].nome + ' Cognome: ' + studentsList[key].cognome;
+    document.getElementById('students').innerHTML = studentListString;
 
 
