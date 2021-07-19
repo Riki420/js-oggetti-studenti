@@ -3,3 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+.container-mini{
+    margin: 0 auto;
+    font-size: 1.4em;
+    width: 250px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#es1,
+#students{
+    list-style: none;
+    text-transform: capitalize;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
